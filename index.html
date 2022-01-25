@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="pt-BR" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Product Card | CodingLab</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Boxicons CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="product-card">
+      <div class="logo-cart">
+        <img src="images/logo.jpg" alt="logo" />
+        <i class="bx bx-shopping-bag"></i>
+      </div>
+      <div class="main-images">
+        <img id="white" class="white" src="images/white.png" alt="white" />
+        <img id="blue" class="blue active" src="images/blue.png" alt="blue" />
+        <img id="pink" class="pink" src="images/pink.png" alt="blue" />
+        <img id="yellow" class="yellow" src="images/yellow.png" alt="blue" />
+      </div>
+      <div class="shoe-details">
+        <span class="shoe_name">ADDIDAS GAZE ZX</span><br />
+        <span Product class="product_details">Product Details</span>
+        <p>
+          Packaging dimensions ‏ : ‎ 31.7 x 21.79 x 12.4 cm; 517.1g<br />
+          Manufacturer ‏ : ‎ adidas<br />
+          ASIN ‏ : ‎ B082W43QGN<br />
+          Model number ‏ : ‎ JAH03<br />
+          Department ‏ : ‎ Unisex Adult<br />
+        </p>
+        <div class="stars">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+      </div>
+      <div class="color-price">
+        <div class="color-option">
+          <span class="color">Colour:</span>
+          <div class="circles">
+            <span class="circle white" id="white"></span>
+            <span class="circle blue active" id="blue"></span>
+            <span class="circle pink" id="pink"></span>
+            <span class="circle yellow" id="yellow"></span>
+          </div>
+        </div>
+        <div class="price">
+          <span class="price_num">$09.00</span>
+          <span class="price_letter">Nine dollar only</span>
+        </div>
+      </div>
+      <div class="button">
+        <div class="button-layer"></div>
+        <button>Add To Cart</button>
+      </div>
+    </div>
+
+    <script>
+      let circle = document.querySelector('.color-option')
+
+      circle.addEventListener('click', e => {
+        let target = e.target
+        if (target.classList.contains('circle')) {
+          circle.querySelector('.active').classList.remove('active')
+          target.classList.add('active')
+          document
+            .querySelector('.main-images .active')
+            .classList.remove('active')
+          document
+            .querySelector(`.main-images .${target.id}`)
+            .classList.add('active')
+        }
+      })
+    </script>
+  </body>
+</html>
