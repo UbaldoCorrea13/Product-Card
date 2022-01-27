@@ -128,10 +128,10 @@ body {
   box-shadow: 0 0 0 2px #fff, 0 0 0 4px #f5da00;
 }
 .color-option .circles .circle.white {
-  background: #fff;
+  background: rgb(245, 194, 198);
 }
 .color-option .circles .circle.white.active {
-  box-shadow: 0 0 0 2px #fa1795, 0 0 0 4px #0071c7;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #0071c7;
 }
 .color-price .price {
   display: flex;
