@@ -38,12 +38,12 @@ body {
 }
 .product-card .logo-cart i {
   font-size: 27px;
-  color: #faf9f6;
+  color: #rgb(184, 180, 180);
   cursor: pointer;
   transition: color 0.3s ease;
 }
 .product-card .logo-cart i:hover {
-  color: #333;
+  color: #000;
 }
 .product-card .main-images {
   position: relative;
